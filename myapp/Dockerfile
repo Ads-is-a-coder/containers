@@ -20,5 +20,9 @@ RUN npm install -g @angular/cli@7.3.9
 # add app
 COPY . /app
 
+# The container will listen on port 80 using the TCP protocol.
+EXPOSE 80
+
 # start app
-CMD ng serve --host 0.0.0.0
+CMD ng serve --host 0.0.0.0 --port 80
+
